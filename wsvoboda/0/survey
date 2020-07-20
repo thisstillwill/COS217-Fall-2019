@@ -1,0 +1,70 @@
+Student's username
+wsvoboda
+What is your concentration/major (COS, MAT, ..., undeclared, other, N/A)?
+COS
+What degree are you pursuing (AB, BSE, grad, undeclared, N/A)?
+AB
+What is your expected graduation year (4 digits, N/A)?
+2022
+Binary number system (0-5)?
+3
+Hexadecimal number system (0-5)?
+2
+Representation of signed integers (two's comp notation) (0-5)?
+2
+Linux operating system, in general (0-5)?
+2
+Fundamental commands (cd, ls, cat, etc.) (0-5)?
+3
+Redirection (< and >) and pipes ( | ) (0-5)?
+2
+Background processes via Ctrl-z (0-5)?
+0
+GNU programming environment, in general (0-5)?
+1
+The emacs editor (0-5)?
+0
+The gcc compiler driver (0-5)?
+1
+The gdb debugger (0-5)?
+0
+The make project maintenance tool (0-5)?
+0
+Java programming language, in general (0-5)?
+3
+Java control stmts (if, switch, for, while, do, break) (0-5)?
+2
+Java methods (0-5)?
+3
+Java arrays (0-5)?
+3
+Java classes (0-5)?
+2
+C programming language, in general (0-5)?
+0
+C control stmts (if, switch, for, while, do, break) (0-5)?
+0
+C functions (0-5)?
+0
+C arrays (0-5)?
+0
+C structures (0-5)?
+0
+C preprocessor directives (#include, #define, etc.) (0-5)?
+0
+C interface (.h) files (0-5)?
+0
+C pointers and pointer operators (* and &) (0-5)?
+0
+C dynamic memory mgmt (malloc, calloc, realloc, free) (0-5)?
+0
+C void pointers (0-5)?
+0
+C function pointers (0-5)?
+0
+C abstract data types (ADTs) (0-5)?
+0
+ARMv8 architecture (0-5)?
+0
+ARMv8 assembly language (0-5)?
+1

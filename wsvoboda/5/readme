@@ -1,0 +1,147 @@
+Assignment 5 readme File
+
+------------------------------------------------------------------------
+Student 1: What is your name?
+
+-William Svoboda
+
+------------------------------------------------------------------------
+Student 2: What is your name?
+
+-Will Drury
+
+------------------------------------------------------------------------
+Student 1: What authorized sources of information did you use to
+complete the assignment? COPY THE LIST of authorized sources of
+information given in the "Policies" web page to this section of the
+readme file, and edit it as appropriate.
+
+The course's lectures.
+
+The course's precepts.
+
+The course's website.
+
+Documents that are referenced directly by the course's website. Such
+documents include the course's lecture slides and precept handouts.
+
+The course's textbooks.
+
+The man pages on the armlab cluster.
+
+The course's current staff members outside of class time through office
+hours.
+- Professor Moretti's Monday office hours
+
+The course's current staff members outside of class time through e-mail.
+- I had email correspondance with both my preceptor Josh and Professor
+Moretti
+
+
+------------------------------------------------------------------------
+Student 2: What authorized sources of information did you use to
+complete the assignment? COPY THE LIST of authorized sources of
+information given in the "Policies" web page to this section of the
+readme file, and edit it as appropriate.
+
+The course's lectures.
+
+The course's precepts.
+
+The course's website.
+
+Documents that are referenced directly by the course's website. Such
+documents include the course's lecture slides and precept handouts.
+
+The course's textbooks.
+
+The man pages on the armlab cluster.
+
+The course's current staff members outside of class time through office
+hours.
+- Professor Moretti's Monday office hours
+
+------------------------------------------------------------------------
+Student 1: What unauthorized sources of information did you use to
+complete the assignment? List any unauthorized sources of information
+that you used to complete the assignment, and describe how you used
+them. The course "Policies" web page defines unauthorized sources of
+information, and any source that you have used but not listed in the
+authorized sources should be included here. Please note that using an
+unauthorized source may trigger a course penalty, and depending on the
+nature of the interaction, may additionally require the interaction
+being reported to the Committee on Discipline. Write "None" if you used
+no unauthorized sources of information.
+
+-None
+
+------------------------------------------------------------------------
+Student 2: What unauthorized sources of information did you use to
+complete the assignment? List any unauthorized sources of information
+that you used to complete the assignment, and describe how you used
+them. The course "Policies" web page defines unauthorized sources of
+information, and any source that you have used but not listed in the
+authorized sources should be included here. Please note that using an
+unauthorized source may trigger a course penalty, and depending on the
+nature of the interaction, may additionally require the interaction
+being reported to the Committee on Discipline. Write "None" if you used
+no unauthorized sources of information.
+
+-None
+
+------------------------------------------------------------------------
+Student 1: What is your assessment of the assignment? Was it helpful?
+Was it fun?
+
+This assignment was incredibly frustrating, mostly in regards to
+debugging. It certainly made me better at using GDB, but otherwise as
+said in precept the assignment itself is somewhat arbitrary due to all
+the steps required to make the attacks work (such as using memprotect).
+I also really hated not being able to totally fix our A+ attack, since
+we went through so many novel ways of solving the problem. We got really
+really close, but unfortunately could never resolve the newline issue in
+time
+
+------------------------------------------------------------------------
+Student 2: What is your assessment of the assignment? Was it helpful?
+Was it fun?
+
+Although debugging took a long time and was very tedious, it was
+satisfying as always to see the end result. The general idea of the
+assignment was cool since it almost felt like we were 'hacking'
+grader.c and it definately gave me a better understanding of
+machine code. Unfortunatly we weren't able to fully complete the A+
+attack, despite being on the right track (so we think).
+
+------------------------------------------------------------------------
+(optional) What information can you provide about your submission that
+will help your grader to grade it in the most favorable light? In
+particular, what bugs are in your submission?
+
+- There is a bug in our implementation of the A+ attack. The comment in
+the createdataAplus.c source file says it best, but essentially we replace
+the intended string in the first print statement in main with our own.
+This is done by putting the new string in BSS and putting its starting
+address in X0. Then the value of the newline character is put in X1.
+Then there is more machine code to branch to the print statement.
+Both registers can be confirmed to have their intended values, but there
+is a bug where the newline is never actually printed (we use a %c in our
+string).
+
+------------------------------------------------------------------------
+What are your sentences from Step 1?
+
+According to 18 U.S. Code 1030, if you were to use a buffer overrun
+attack to commit fraud or related activity in connection with
+computers, but did not attempt to cause death and did not knowingly or
+recklessly cause death, then you could receive a maximum penalty of 10
+years in prison.
+
+According to 18 U.S. Code 1030, if you were to use a buffer overrun
+attack to commit fraud or related activity in connection with
+computers, and attempted to cause death or knowingly or recklessly
+caused death, then you could receive a maximum penalty of 20 years in
+prison.
+
+
+------------------------------------------------------------------------

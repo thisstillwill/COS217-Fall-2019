@@ -1,0 +1,172 @@
+Assignment 2 readme File
+
+------------------------------------------------------------------------
+What is your name?
+
+William Svoboda
+
+------------------------------------------------------------------------
+What authorized sources of information did you use to complete
+the assignment? COPY THE LIST of authorized sources of information
+given in the "Policies" web page to this section of the readme file,
+and edit it as appropriate.
+
+The course's lectures.
+
+The course's precepts.
+
+The course's website.
+
+Documents that are referenced directly by the course's website. Such
+documents include the course's lecture slides and precept handouts.
+
+The course's textbooks.
+
+The man pages on the armlab cluster.
+
+The course's current staff members outside of class time through office
+hours.
+- Greg Chan's office hours on Thursday, Ethan Tseng's office hours on
+Saturday, Christopher Moretti's office hours on Monday, and John Li's
+office hours on Monday.
+
+------------------------------------------------------------------------
+What unauthorized sources of information did you use to complete the
+assignment? List any unauthorized sources of information that you used
+to complete the assignment, and describe how you used them. The course
+"Policies" web page defines unauthorized sources of information, and
+any source that you have used but not listed in the authorized sources
+should be included here. Please note that using an unauthorized source
+may trigger a course penalty, and depending on the nature of the
+interaction, may additionally require the interaction being reported
+to the Committee on Discipline. Write "None" if you used no
+unauthorized sources of information.
+
+None
+
+------------------------------------------------------------------------
+What is your assessment of the assignment? Was it helpful? Was it fun?
+
+This assignment was ridiculous. I want whatever the people who said it
+only took 10 hours are on, because almost everyone I know struggled
+greatly with it. Conceptually writing the string functions in both array
+and pointer format wasn't hard, but debugging was a slog especially for
+the Str_search and almost every single pointer implementation. GDB
+should have been actually taught in precept for sure. I guess I don't
+understand why there was a need to implement all 5 of the string
+functions, when the client needs at most 2-3 of them. I think the
+assignment would have been more well-rounded if the number of functions
+we had to implement was cut down (make the string search a requirement
+not a challenge to compensate). 
+
+------------------------------------------------------------------------
+(optional) What information can you provide about your submission that
+will help your grader to grade it in the most favorable light? In
+particular, what bugs are in your submission?
+
+
+
+------------------------------------------------------------------------
+What warnings does splint generate on stra.c, and what are your
+disagreements with them? Copy the splint warnings here, and express your
+disagreement after each warning. If there are no warnings, then write
+"None."
+
+None.
+
+------------------------------------------------------------------------
+What warnings does critTer generate on stra.c, and what are your
+disagreements with them? Copy the critTer warnings here, and express
+your disagreement after each warning. If there are no warnings, then
+write "None."
+
+stra.c: line 91: medium priority:
+   Variable/function name 'p' is too short
+
+- I disagree, because p has been used over and over again in precept
+code examples to represent a pointer.
+
+   stra.c: line 111: low priority:
+      This area is deeply nested at level 4, consider refactoring
+
+- I don't disagree that the combination of conditionals and for loops I
+have is not necessarily common, but it is the logic that simply made the
+most sense for me when writing it. It is slightly clearer I think in
+strp.c where I use pointer notation, but I think that this observation
+simply highlights one of the goals of the assignment: to show the
+benefits of using pointers.
+
+------------------------------------------------------------------------
+What warnings does splint generate on strp.c, and what are your
+disagreements with them? Copy the splint warnings here, and express your
+disagreement after each warning. If there are no warnings, then write
+"None."
+
+strp.c: (in function Str_copy)
+strp.c:35:7: Assignment of int to size_t: index = pcEnd - pcSrc
+  To allow arbitrary integral types to match long unsigned, use +longintegral.
+  strp.c:41:15: Variable index used before definition
+    An rvalue is used that may not be initialized to a value on some execution
+      path. (Use -usedef to inhibit warning)
+      strp.c: (in function Str_concat)
+      strp.c:61:7: Assignment of int to size_t: index = pcEnd - pcSrc
+      strp.c:65:32: Variable index used before definition
+      strp.c: (in function Str_compare)
+      strp.c:82:7: Assignment of int to size_t: index = pcEnd - s2
+      strp.c: (in function Str_search)
+      strp.c:118:7: Assignment of int to size_t: searchIndex = haystackEnd - haystack
+      strp.c:127:13: Assignment of int to size_t: needleIndex = needleEnd - needle
+
+- I don't disagree with these warnings. However, I honestly struggle a
+little on actually refactoring my strp.c code, since I don't have any
+prior experience with warning like the assignment of int to size_t
+in precept.
+
+------------------------------------------------------------------------
+What warnings does critTer generate on strp.c, and what are your
+disagreements with them? Copy the critTer warnings here, and express
+your disagreement after each warning. If there are no warnings, then
+write "None."
+
+strp.c: line 105: medium priority:
+   Variable/function name 'p' is too short
+
+- I disagree, for the same reason I disagreed when critTer disliked
+using p in stra.c.
+
+   strp.c: line 129: low priority:
+      This area is deeply nested at level 4, consider refactoring
+
+- Like the case with stra.c, I honestly don't think the code is that
+confusing. Furthermore, the goal of implementing string search was not
+one of necessarily great efficiency, so since my code fulfills all of
+the client's requirements I consider it satisfactory.
+
+------------------------------------------------------------------------
+What warnings does splint generate on replace.c, and what are your
+disagreements with them? Copy the splint warnings here, and express your
+disagreement after each warning. If there are no warnings, then write
+"None."
+
+None.
+
+------------------------------------------------------------------------
+What warnings does critTer generate on replace.c, and what are your
+disagreements with them? Copy the critTer warnings here, and express
+your disagreement after each warning. If there are no warnings, then
+write "None."
+
+None.
+
+------------------------------------------------------------------------
+Is it possible for Str_copy or Str_concat to call assert to verify
+that the destination memory area specified by the caller is large
+enough? Explain.
+
+At one of the office hours I went to (I think the one with Moretti),
+we discussed this question. At the end of the day, a pointer knows
+nothing more than exactly what it points to, and so will happily attempt
+to access off-limits memory if you let it. I think something was
+mentioned also about learning memory allocation this week but I digress.
+
+------------------------------------------------------------------------

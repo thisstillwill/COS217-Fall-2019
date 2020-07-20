@@ -1,0 +1,45 @@
+------------------------------------------------------------------------
+Textual representation of the DFA expressing the required logic for
+de-commenting.
+------------------------------------------------------------------------
+
+NORMAL (accept) <-- the start state
+       ": IN_STRING_LITERAL (print double quotes)
+       ': IN_CHAR_LITERAL (print single quotes)
+       /: WARNING_IN_COMMENT
+       other: NORMAL (print character)
+
+IN_STRING_LITERAL (accept)
+       ": NORMAL (print double quotes)
+       \: STRING_LITERAL_BUFFER (print backslash)
+       other: IN_STRING_LITERAL (print character)
+
+STRING_LITERAL_BUFFER (accept)
+       other: IN_STRING_LITERAL (print character)
+
+IN_CHAR_LITERAL (accept)
+       ': NORMAL (print single quotes)
+       \: CHAR_LITERAL_BUFFER (print backslash)
+       other: IN_CHAR_LITERAL (print character)
+
+CHAR_LITERAL_BUFFER (accept)
+       other: IN_CHAR_LITERAL (print character)
+
+WARNING_IN_COMMENT (accept)
+       *: IN_COMMENT (print space)
+       ": IN_STRING_LITERAL (print forward slash and double quotes)
+       ': IN_CHAR_LITERAL (print forward slash and single quotes)
+       /: WARNING_IN_COMMENT (print forward slash)
+       other: NORMAL (print forward slash and character)
+
+IN_COMMENT (reject)
+       *: WARNING_OUT_COMMENT
+       newline: IN_COMMENT (print newline)
+       other: IN_COMMENT
+
+WARNING_OUT_COMMENT (reject)
+       /: NORMAL
+       *: WARNING_OUT_COMMENT
+       newline: IN_COMMENT (print newline)
+       other: IN_COMMENT
+
