@@ -20,7 +20,7 @@ This repository contains my assignment code submitted for [COS 217 Introduction 
 
 ## Usage
 
-Compile and run C code as normal (ex. using `gcc`).
+Compile and run C code as normal (ex. using `gcc`). Some assignment folders contain makefiles.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
