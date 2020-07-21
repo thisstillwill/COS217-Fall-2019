@@ -17,6 +17,7 @@ This repository contains my assignment code submitted for [COS 217 Introduction 
     ├── 5
     └── 7
 ```
+* `wsvoboda.pdf` - Grade report for Assignment 7 with rubric and grader comments
 
 ## Usage
 
