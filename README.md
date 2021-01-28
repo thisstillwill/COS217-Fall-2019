@@ -17,6 +17,7 @@ This repository contains my assignment code submitted for [COS 217 Introduction 
     ├── 5
     └── 7
 ```
+
 * `wsvoboda.pdf` - Grade report for Assignment 7 with rubric and grader comments
 
 ## Usage
@@ -24,4 +25,5 @@ This repository contains my assignment code submitted for [COS 217 Introduction 
 Compile and run C code as normal (ex. using `gcc`). Some assignment folders contain makefiles.
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
