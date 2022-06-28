@@ -4,11 +4,11 @@ This repository contains my assignment code submitted for [COS 217 Introduction 
 
 ## Contents
 
-* `wsvoboda` - Directory containing C source code for assignments. Individual assignments are located in subfolders and denoted using the number of the assignment:
+- `Assignments/` - Directory containing C source code for assignments. Individual assignments are located in subfolders and denoted using the number of the assignment:
 
 ```
 .
-└── wsvoboda
+└── Assignments
     ├── 0
     ├── 1
     ├── 2
@@ -18,7 +18,7 @@ This repository contains my assignment code submitted for [COS 217 Introduction 
     └── 7
 ```
 
-* `wsvoboda.pdf` - Grade report for Assignment 7 with rubric and grader comments
+- `wsvoboda.pdf` - Grade report for Assignment 7 with rubric and grader comments
 
 ## Usage
 
